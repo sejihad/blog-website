@@ -25,7 +25,9 @@ const router = createBrowserRouter([
         path: "/blogs/:id",
         element: <SingleBlog />,
         loader: ({ params }) =>
-          fetch(`${window.location.origin}/blogs/${params.id}`),
+          fetch(
+            `https://blog-website-server-nine.vercel.app/api/blogsData.json/${params.id}`
+          ),
       },
     ],
   },

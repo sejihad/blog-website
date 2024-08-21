@@ -12,7 +12,7 @@ const BlogPage = () => {
   const [activeCategory, setActiveCategory] = useState(null);
   useEffect(() => {
     const fetchBlogs = async () => {
-      let url = `${window.location.origin}/blogs?page=${currentPage}&limit=${pageSize}`;
+      let url = `https://blog-website-server-nine.vercel.app/api/blogsData.json?page=${currentPage}&limit=${pageSize}`;
 
       // filter by category
       if (selectedCategory) {
